@@ -3,7 +3,6 @@
 }
 
 form {
-    /* padding: 2rem 7rem 2rem 7rem; */
     padding: 3rem 0rem 1.5rem 0rem;
     width: 80%;
     margin: auto;
@@ -29,7 +28,6 @@ input {
     border: none;
     height: 2.2rem;
     border-radius: 5px;
-    /* min-width: 350px; */
     flex-basis: 350px;
     padding-left: 1rem;
 }
@@ -37,7 +35,6 @@ input {
 .form--button-bg {
     flex-grow: 1;
     border-radius: 5px;
-    /* min-width: 50px; */
     flex-basis: 120px;
 }
 
@@ -55,14 +52,12 @@ input {
 }
 
 .error-msg {
-    /* display: none; */
     position: absolute;
     top: 90px;
     left: 65px;
     color: var(--light-red);
     font-weight: 100;
     font-size: 0.9rem;
-    /* z-index: 99; */
 }
 
 @media screen and (max-width: 1005px) {

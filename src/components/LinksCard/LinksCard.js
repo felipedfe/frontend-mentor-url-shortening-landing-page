@@ -20,12 +20,6 @@ function LinksCard(props) {
     setTimeout(restoreButton, 1500)
   }
 
-  // const restoreButton = () => {
-  //   const copyButton = buttonElement.current;
-  //   copyButton.classList.remove("copied");
-  //   copyButton.innerText = "Copy";
-  // }
-
   return (
     <div className="links-card--container">
       <p className="links-card--original-url">{original}</p>
@@ -33,7 +27,6 @@ function LinksCard(props) {
         <p className="links-card--shortened-url">{shortened}</p>
         <button
           className="links-card--button"
-          // onMouseLeave={restoreButton}
           ref={buttonElement}
           onClick={copyLink}
         >

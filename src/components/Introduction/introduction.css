@@ -1,25 +1,10 @@
-/* .introduction--container {
-    position: relative;
-    display: flex;
-    width: 100%;
-    margin-left: 10%;
-    overflow: hidden;
-    margin: auto;
-} */
-
 .introduction--container {
     position: relative;
     display: flex;
     width: 90%;
     margin-left: auto;
     overflow: hidden;
-    /* background-color: pink; */
 }
-
-/* .introduction--text-btn-wrapper {
-    width: 40%;
-    padding-top: 6rem;
-} */
 
 .introduction--text-btn-wrapper {
     width: 50%;

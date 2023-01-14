@@ -14,7 +14,6 @@ function Footer() {
       <div className="footer--logo-wrapper">
         <Logo fill="white" />
       </div>
-      {/* <div className="footer--link-icons-wrapper"> */}
       <ul>
         <li>Features</li>
         <li>Link Shortening</li>
@@ -40,7 +39,6 @@ function Footer() {
         <img src={PinterestIcon} alt="facebook-logo" />
         <img src={InstagramIcon} alt="facebook-logo" />
       </div>
-      {/* </div> */}
     </div>
   )
 };
