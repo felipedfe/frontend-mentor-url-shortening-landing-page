@@ -1,0 +1,23 @@
+.cta--container {
+    display: flex;
+    justify-content: center;
+    background-color: var(--purple-gray);
+    background-image: url('../../assets/bg-boost-desktop.svg');
+    background-size: cover;
+}
+
+/* .cta--background {
+    background-image: url('../../assets/bg-boost-desktop.svg');
+    background-size: cover;
+    background-color: yellow;
+} */
+
+.cta--title-btn-wrapper {
+    text-align: center;
+    padding: 4rem 0 4rem 0;
+}
+
+.cta--title {
+    color: white;
+    margin-bottom: 1rem;
+}

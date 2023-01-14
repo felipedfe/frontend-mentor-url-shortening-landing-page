@@ -1,0 +1,84 @@
+.form--container {
+    position: relative;
+}
+
+form {
+    /* padding: 2rem 7rem 2rem 7rem; */
+    padding: 3rem 0rem 1.5rem 0rem;
+    width: 80%;
+    margin: auto;
+}
+
+.form--bg-container {
+    position: relative;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background-image: url('../../assets/bg-shorten-desktop.svg');
+    background-color: var(--purple-gray);
+    background-size: cover;
+    padding: 3rem 4rem 3rem 4rem;
+    border-radius: 10px;
+}
+
+input {
+    flex-grow: 12;
+    align-items: flex-end;
+    border: none;
+    height: 2.2rem;
+    border-radius: 5px;
+    /* min-width: 350px; */
+    flex-basis: 350px;
+    padding-left: 1rem;
+}
+
+.form--button-bg {
+    flex-grow: 1;
+    border-radius: 5px;
+    /* min-width: 50px; */
+    flex-basis: 120px;
+}
+
+.form--button-bg {
+    background-color: white;
+}
+
+.shorten-btn {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.input--not-allowed {
+    border: solid 1px var(--light-red);
+}
+
+.error-msg {
+    /* display: none; */
+    position: absolute;
+    top: 90px;
+    left: 65px;
+    color: var(--light-red);
+    font-weight: 100;
+    font-size: 0.9rem;
+    /* z-index: 99; */
+}
+
+@media screen and (max-width: 1005px) {
+    .form--bg-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding: 2rem;
+    }
+
+    .error-msg {
+        top: 70px;
+        left: 35px;
+        font-size: 0.8rem;
+    }
+
+    .form--bg-container {
+        background-image: url('../../assets/bg-boost-mobile.svg');
+    }
+}
