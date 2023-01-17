@@ -15,6 +15,8 @@ function App() {
   const [allUrls, setAllUrls] = useState([]);
   const [submittedForm, setSubmittedForm] = useState(false);
 
+  const isBrowser = typeof window !== "undefined";
+
   // Função ativada no componente Form
   const handleClick = async () => {
     setSubmittedForm(true);
@@ -37,13 +39,17 @@ function App() {
 
   // As URLs são resgatadas do Local Storage assim que o componente é montado...
   useEffect(() => {
-    const urls = getStoredUrls();
-    setAllUrls(urls);
+    if(isBrowser){
+      const urls = getStoredUrls();
+      setAllUrls(urls);
+    }
   }, []);
 
   //...e adicionadas assim que o estado da lista de URLs é modificada
   useEffect(() => {
-    addUrlsToStorage(allUrls)
+    if(isBrowser){
+      addUrlsToStorage(allUrls)
+    }
   }, [allUrls]);
 
   return (

@@ -5,13 +5,28 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import './header.css';
 
 function Header() {
-  const [isMenuDisabled, setIsMenuDisabled] = useState(
-    window.innerWidth >= 1005 ? false : true
-  )
+  const isBrowser = typeof window !== "undefined";
 
-  window.addEventListener('resize', () => {
-    return (window.innerWidth >= 1005 && isMenuDisabled) ? setIsMenuDisabled(false) : null
-  });
+  const checkWindowWidth = () => {
+    if (isBrowser) {
+      if (window.innerWidth >= 1005) {
+        return false
+      }
+      return true;
+    }
+  }
+
+  // const [isMenuDisabled, setIsMenuDisabled] = useState(
+  //   window.innerWidth >= 1005 ? false : true
+  // )
+
+  const [isMenuDisabled, setIsMenuDisabled] = useState(checkWindowWidth())
+
+  if (isBrowser) {
+    window.addEventListener('resize', () => {
+      return (window.innerWidth >= 1005 && isMenuDisabled) ? setIsMenuDisabled(false) : null
+    });
+  }
 
   const showNavigation = () => {
     setIsMenuDisabled((prevState) => !prevState)
