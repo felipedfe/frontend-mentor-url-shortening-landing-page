@@ -16,6 +16,9 @@ Um grande desafio foi a estilização da página, pois o site fornece algumas im
 - Gatsby
 - Axios
 
+## •Link para a aplicação (já encurtado :wink:)
+https://shrtco.de/VELIAd
+
 ## •Executando a aplicação
 - Clone o repositório em sua máquina
 - No terminal, instale as dependência da aplicação: ```npm install```
