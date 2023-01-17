@@ -14,7 +14,6 @@
 .introduction--title {
     font-size: 3rem;
     line-height: 1;
-    /* font-weight: bold; */
     width: 90%;
 }
 
@@ -30,12 +29,10 @@
 .introduction--image-wrapper {
     overflow: hidden;
     width: 50%;
-    /* width: 100%; */
 }
 
 .introduction--image {
     padding-left: 1rem;
-    /* width: 145%; */
 }
 
 @media screen and (max-width: 1005px) {

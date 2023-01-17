@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../Button/Button'
 import logo from '../../assets/logo.svg';
 import { AiOutlineMenu } from 'react-icons/ai';
 import './header.css';
 
-function Header(props) {
-  const { isMenuDisabled, showNavigation } = props;
+function Header() {
+  const [isMenuDisabled, setIsMenuDisabled] = useState(
+    window.innerWidth >= 1005 ? false : true
+  )
+
+  window.addEventListener('resize', () => {
+    return (window.innerWidth >= 1005 && isMenuDisabled) ? setIsMenuDisabled(false) : null
+  });
+
+  const showNavigation = () => {
+    setIsMenuDisabled((prevState) => !prevState)
+  }
 
   return (
-    <>
+    <header className="header--container">
       <img
         className="header--logo"
         src={logo} alt="shortly-logo"
@@ -34,7 +44,7 @@ function Header(props) {
           </li>
         </ul>
       </nav>
-    </>
+    </header>
   )
 }
 

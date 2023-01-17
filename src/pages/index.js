@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import fetchApi from '../service/api';
-import { getUrls, addUrls } from '../service/localStorage';
+import { getStoredUrls, addUrlsToStorage } from '../service/localStorage';
 import Form from '../components/Form/Form'
 import LinksCard from '../components/LinksCard/LinksCard';
 import Header from '../components/Header/Header';
@@ -12,83 +12,53 @@ import '../global-style/index.css';
 
 function App() {
   const [inputUrl, setInputUrl] = useState("");
-  const [shortenedUrl, setShortenedUrl] = useState("");
   const [allUrls, setAllUrls] = useState([]);
   const [submittedForm, setSubmittedForm] = useState(false);
-  const [isMenuDisabled, setIsMenuDisabled] = useState(
-    window.innerWidth >= 1005 ? false : true
-  )
 
-  const menuClick = () => {
-    if ((window.innerWidth >= 1005) && (isMenuDisabled)) {
-      console.log(window.innerWidth)
-      document.querySelector('.header--mobile-menu-btn').click();
-    }
-  };
-
-  window.addEventListener('resize', menuClick);
-
+  // Função ativada no componente Form
   const handleClick = async () => {
     setSubmittedForm(true);
-    console.log("click!")
     if (inputUrl.length) {
       const response = await fetchApi(inputUrl);
       if (response.message) {
         console.log(response.message);
       } else {
         const url = response.data.result.full_short_link;
-        setShortenedUrl(url);
+        const newUrls =
+        {
+          original: inputUrl,
+          shortened: url
+        }
+        setAllUrls([...allUrls, newUrls])
       };
       setSubmittedForm(false);
     };
   };
 
-  const showNavigation = () => {
-    setIsMenuDisabled((prevState) => !prevState)
-  }
-
+  // As URLs são resgatadas do Local Storage assim que o componente é montado...
   useEffect(() => {
-    const urls = getUrls();
+    const urls = getStoredUrls();
     setAllUrls(urls);
   }, []);
 
+  //...e adicionadas assim que o estado da lista de URLs é modificada
   useEffect(() => {
-    if (shortenedUrl) {
-      const newUrls =
-      {
-        original: inputUrl,
-        shortened: shortenedUrl
-      }
-      setAllUrls([...allUrls, newUrls]);
-    }
-  }, [shortenedUrl]);
-
-  useEffect(() => {
-    addUrls(allUrls)
+    addUrlsToStorage(allUrls)
   }, [allUrls]);
 
   return (
     <>
-      <header className="header--container">
-        <Header
-          isMenuDisabled={isMenuDisabled}
-          showNavigation={showNavigation}
-        />
-      </header>
+      <Header />
       <main>
-        <section className="introduction--container">
-          <Introduction />
-        </section>
+        <Introduction />
         <div className="bg-wrapper">
           <div className="bg" />
-          <section className="form--container">
-            <Form
-              setInputUrl={setInputUrl}
-              handleClick={handleClick}
-              submittedForm={submittedForm}
-              inputUrl={inputUrl}
-            />
-          </section>
+          <Form
+            setInputUrl={setInputUrl}
+            handleClick={handleClick}
+            submittedForm={submittedForm}
+            inputUrl={inputUrl}
+          />
           <section className="links--container">
             {allUrls.map((url, index) => (
               <LinksCard
@@ -97,17 +67,11 @@ function App() {
               />
             ))}
           </section>
-          <section className="information--container">
-            <Information />
-          </section>
+          <Information />
         </div>
-        <section className="cta--container">
-          <CallToAction />
-        </section>
+        <CallToAction />
       </main >
-      <footer className="footer--container">
-        <Footer />
-      </footer>
+      <Footer />
     </>
   )
 };

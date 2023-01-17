@@ -7,7 +7,7 @@ import './information.css';
 
 function Information() {
   return (
-    <>
+    <section className="information--container">
       <div className="information--title-wrapper">
         <h2 className="information--title">Advanced Statistics</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fringilla orci et leo commodo aliqua</p>
@@ -30,7 +30,7 @@ function Information() {
         />
         <div className="information--bg-line" />
       </div>
-    </>
+    </section>
   )
 }
 

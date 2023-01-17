@@ -5,7 +5,7 @@ import './introduction.css';
 
 function Introduction() {
   return (
-    <>
+    <section className="introduction--container">
       <div className="introduction--text-btn-wrapper">
         <h1 className="introduction--title">
           More than just shorter links
@@ -26,7 +26,7 @@ function Introduction() {
           alt="person working on a desktop computer"
         />
       </div>
-    </>
+    </section>
   )
 }
 

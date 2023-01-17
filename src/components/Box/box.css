@@ -3,8 +3,6 @@
     background-color: white;
     padding: 4rem 1rem 1.5rem 1rem;
     z-index: 1;
-    /* padding: 1rem; */
-    /* width: 25%; */
 }
 
 .box-title {
@@ -20,11 +18,9 @@
     border-radius: 50%;
     width: 4rem;
     height: 4rem;
-    /* padding: 1rem; */
 }
 
 .box-img {
-    /* background-color: var(--purple-gray); */
     padding: 0.9rem;
     width: 100%;
 
