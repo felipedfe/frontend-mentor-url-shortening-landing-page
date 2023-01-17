@@ -1,54 +1,23 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Shortly
+![Tela da aplicação](https://github.com/felipedfe/felipedfe.github.io/blob/main/imagens/08-shortly-web.png)
 
-## 🚀 Quick start
+## •Descrição
+Um exercício proposto pelo site <strong>Frontend Mentor</strong> (https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G).
+O objetivo foi criar uma página onde o usuário pode inserir um link muito longo e receber uma versão encurtada dele. A geração desse link foi feita pelo acesso à <strong>shrtcode API</strong>
 
-1.  **Create a Gatsby site.**
+## •Desafios
+Um grande desafio foi a estilização da página, pois o site fornece algumas imagens de como o resultado final deve ficar (ou ao menos se aproximar). A página é uma Home mais complexa em comparação com as que eu já havia construído e senti que aprimorei muito meu entendimento de CSS, foi uma ótima experiência!
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## •Tecnologias e bibliotecas
+- Javascript
+- HTML
+- CSS
+- React.js
+- Gatsby
+- Axios
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+## •Executando a aplicação
+- Clone o repositório em sua máquina
+- No terminal, instale as dependência da aplicação: ```npm install```
+- Agora é só colocar a aplicação para rodar: ```npm start```
+- E acessar o ```localhost:8000```
