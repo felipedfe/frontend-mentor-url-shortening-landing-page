@@ -5,6 +5,8 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import './header.css';
 
 function Header() {
+  // Essa variável é usada para não ocorrer um erro no build do Gatsby no servidor,
+  // como o Gatsby renderiza no server, tentar acessar o objeto window causaria um erro 
   const isBrowser = typeof window !== "undefined";
 
   const checkWindowWidth = () => {
@@ -15,10 +17,6 @@ function Header() {
       return true;
     }
   }
-
-  // const [isMenuDisabled, setIsMenuDisabled] = useState(
-  //   window.innerWidth >= 1005 ? false : true
-  // )
 
   const [isMenuDisabled, setIsMenuDisabled] = useState(checkWindowWidth())
 

@@ -15,6 +15,8 @@ function App() {
   const [allUrls, setAllUrls] = useState([]);
   const [submittedForm, setSubmittedForm] = useState(false);
 
+  // Essa variável é usada para não ocorrer um erro no build do Gatsby no servidor
+  // como o Gatsby renderiza no server, tentar acessar o objeto window causaria um erro 
   const isBrowser = typeof window !== "undefined";
 
   // Função ativada no componente Form
