@@ -34,9 +34,9 @@ function Footer() {
         </ul>
         <div className="footer--icons-wrapper">
           <img src={FacebookIcon} alt="facebook-logo" />
-          <img src={TwitterIcon} alt="facebook-logo" />
-          <img src={PinterestIcon} alt="facebook-logo" />
-          <img src={InstagramIcon} alt="facebook-logo" />
+          <img src={TwitterIcon} alt="twitter-logo" />
+          <img src={PinterestIcon} alt="pinterest-logo" />
+          <img src={InstagramIcon} alt="instagram-logo" />
         </div>
       </div>
     </footer>
