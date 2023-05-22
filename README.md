@@ -1,5 +1,5 @@
 # Shortly
-<img src="https://github.com/felipedfe/connect-four-game/blob/main/08-shortly.png" alt="tela da aplicação" width="600">
+<img src="https://github.com/felipedfe/connect-four-game/blob/main/08-shortly-web.png" alt="tela da aplicação" width="600">
 
 ## •Descrição
 Um exercício proposto pelo site <strong>Frontend Mentor</strong> (https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G).
